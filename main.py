@@ -1,4 +1,4 @@
-from APBFT import *
+from SGPBFT import *
 from client import *
 
 import threading
@@ -11,7 +11,7 @@ timer_limit_before_view_change = 20000 # There is no value proposed in the paper
 checkpoint_frequency = 100 # 100 is the proposed value in the original article
 
 # Define the proportion of nodes we want in the consensus set
-p = 1
+p = 1/2
 
 # Define the nodes we want in our network + their starting time + their type
 nodes={} # This is a dictionary of nodes we want in our network. Keys are the nodes types, and values are a list of tuples of starting time and number of nodes 
