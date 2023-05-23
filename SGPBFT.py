@@ -221,8 +221,8 @@ def reply_received(request,reply): # This method tells the nodes that the client
 
     last_reply_time = time.time()
 
-    if processed_requests%5 == 0 : # We want to stop counting at 100 for example
-        print("Network validated %d requests within %f seconds" % (processed_requests,last_reply_time-first_reply_time))
+    #if processed_requests%5 == 0 : # We want to stop counting at 100 for example
+    print("Network validated %d requests within %f seconds" % (processed_requests,last_reply_time-first_reply_time))
 
     # Update consensus nodes every 50 requests
     if (processed_requests % 50 == 0):
